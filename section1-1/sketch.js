@@ -3,6 +3,9 @@ function setup() {
 }
 
 function draw() {
+
+
+
   background(0);
   strokeWeight(4);
   fill(178, 100, 162);
