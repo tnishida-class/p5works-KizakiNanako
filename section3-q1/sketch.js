@@ -4,15 +4,24 @@
 function setup(){
   createCanvas(400, 400);
   background(255);
-  balloon("I love keyakizaka46");
+  balloon("I love Dragon Quest");
 }
+
 
 function balloon(t){
   let w = textWidth(t);
-  let h = textAscent() + textDescent();
+  let h = textAscent() + textDescent();//吹き出しの高さ？
   let p = 2;
-  fill(0);
-  rect(0, 0, w + p * 2, h + p * 2);
-  fill(255);
-  text(t, p, h + p);
+
+
+  fill(0,0,255);
+
+  rect(0, 0, 150, 40);//x座標は
+  fill(255,0,0); //文字の色
+  text(t, p, h+p);
+  beginShape();
+  vertex(150,10);
+  vertex(170,20);
+  vertex(150,30);
+  endShape(CLOSE);
 }
