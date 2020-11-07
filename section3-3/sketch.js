@@ -1,4 +1,5 @@
 // テキスト「関数を作る(2) 値を戻す関数」～「総仕上げ：カレンダーを描画しよう」
+// テキスト「関数を作る(2) 値を戻す関数」～「総仕上げ：カレンダーを描画しよう」
 function setup(){
   createCanvas(200, 200);
   calendar(2019, 10);
@@ -13,6 +14,12 @@ function setup(){
   }
 }
 
+function isLeapYear(y){
+  return (y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0);
+}
+
+
+
 function calendar(y, m){
   let dow = dayOfWeek(y, m, 1);
   for(let d = 1; d <= daysInMonth(y, m); d++){
@@ -25,7 +32,7 @@ function isLeapYear(y){
 }
 
 function daysInYear(y){
-  // BLANK[1]
+  return isLeapYear(y)? 366:365
 }
 
 function daysInMonth(y, m){
