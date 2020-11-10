@@ -5,6 +5,7 @@ function setup(){
   createCanvas(400, 400);
   background(255);
   balloon("I love Dragon Quest");
+
 }
 
 
@@ -16,12 +17,17 @@ function balloon(t){
 
   fill(0,0,255);
 
-  rect(0, 0, 150, 40);//x座標は
+
+
+  rect(0, 0, w+p, h+p*2);//x座標は
+
   fill(255,0,0); //文字の色
   text(t, p, h+p);
   beginShape();
-  vertex(150,10);
-  vertex(170,20);
-  vertex(150,30);
+  vertex(w+p,0);
+  vertex(w+p+20,h/2+p);
+  vertex(w+p,h+p*2);
+  fill(0,0,255)
   endShape(CLOSE);
+
 }
