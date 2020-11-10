@@ -25,7 +25,7 @@ function balloon(t){
   text(t, p, h+p);
   beginShape();
   vertex(w+p,0);
-  vertex(w+p+20,h/2+p);
+  vertex(w+p+(w+p)/3,h/2+p);
   vertex(w+p,h+p*2);
   fill(0,0,255)
   endShape(CLOSE);
