@@ -1,18 +1,25 @@
 // 練習問題：吹き出し
 // 吹き出しの位置、背景色 etc. を関数 balloon の引数で指定できるようにしてみよう
 // 吹き出しにしっぽを付けてみよう
+
+
+
 function setup(){
+
+
   createCanvas(400, 400);
   background(255);
-  balloon("I love Dragon Quest");
+  balloon();
 
 }
 
+let w = textWidth();
+let h = textAscent() + textDescent();//吹き出しの高さ？
+let p = 2;
+let t = "I love Dragon Quest"
 
-function balloon(t){
-  let w = textWidth(t);
-  let h = textAscent() + textDescent();//吹き出しの高さ？
-  let p = 2;
+function balloon(t,w,p,h){
+
 
 
   fill(0,0,255);

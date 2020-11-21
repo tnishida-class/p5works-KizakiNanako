@@ -56,6 +56,22 @@ function dayOfYear(y, m, d){
 }
 
 function dayOfWeek(y, m, d){
+//今いじってる
+for(let s=1;s<1970; s++){
+  count += daysInYear(s);
+}
+return count+1;　//これで1970/1/1までの合計の日数がわかった？
+
+t=count+1;
+
+//2020/11/25までの合計日数÷t
+//1970/1/1は木曜日
+
+
+
+  }
+
+
   // BLANK[2]
 }
 
