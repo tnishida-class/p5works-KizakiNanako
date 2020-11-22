@@ -1,30 +1,29 @@
 // 最終課題を制作しよう
-
-
+let x,y,r;
+let animate;
 function setup(){
   createCanvas(windowWidth, windowHeight);
-
-
-
+  animate=true;
 }
-let x =0.5*width;
-let y =0.5*height;
-let r =0.4*width;
-
   function draw(){
+y =0.5*height;
+x =0.5*width;
+r=200;
+let t = millis() % 2000;
+  background(160, 192, 255);
 
+  if(t>1000&&animate){
+    line(x,y,x,y-r);
+  }
+    else{
+      line(x,y,x-r,y);
+  }
+  }
 
-   background(160, 192, 255);
-  //  ellipse(x,y,z);
-  //  line(0.5windowWidth+rcos)
-
-
-  const s = x + cos(HALF_PI) *r ; // 関数 cos の戻り値を使用
-  const t = y + sin(HALF_PI) * r;
-    line(x,y,s,t,);
-
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
 }
 
-//function windowResized(){
-////  resizeCanvas(windowWidth, windowHeight);
-//}
+function mouseClicked(){
+  animate=!animate
+}
