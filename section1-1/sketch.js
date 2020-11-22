@@ -16,10 +16,5 @@
   //text("46", 68, 100);
 
 
-  function setup(){
-    createCanvas(windowWidth, windowHeight);
-  }
-    function draw(){
-      background(160, 192, 255);
-      ellipse(0.5*windowWidth,0.5*windowHeight,0.7*windowWidth);
-    }
+  let millisecond = millis();
+text('Milliseconds \nrunning: \n' + millisecond, 5, 40);
