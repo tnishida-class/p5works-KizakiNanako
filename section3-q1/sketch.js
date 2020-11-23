@@ -9,32 +9,32 @@ function setup(){
 
   createCanvas(400, 400);
   background(255);
-  balloon();
+  balloon('I love Bass',255,255,255,0,0,255,255,0,0);
 
 }
 
-let w = textWidth();
-let h = textAscent() + textDescent();//吹き出しの高さ？
-let p = 2;
-let t = "I love Dragon Quest"
 
-function balloon(t,w,p,h){
+function balloon(t,a,b,c,d,e,f,g,j,i){
 
-
-
-  fill(0,0,255);
+  let w = textWidth();
+  let h = textAscent() + textDescent();//吹き出しの高さ？
+  let p = 10;
 
 
 
-  rect(0, 0, w+p, h+p*2);//x座標は
+  fill(a,b,c);
 
-  fill(255,0,0); //文字の色
+
+
+  rect(0, 0, w+p*4, h+p*2);//x座標は
+
+  fill(d,e,f); //文字の色
   text(t, p, h+p);
   beginShape();
-  vertex(w+p,0);
-  vertex(w+p+(w+p)/3,h/2+p);
-  vertex(w+p,h+p*2);
-  fill(0,0,255)
+  vertex(w+p*4,0);
+  vertex(w+p+(w+p)*4/3,h/2+p);
+  vertex(w+p*4,h+p*2);
+  fill(g,j,i)
   endShape(CLOSE);
 
 }
